@@ -1,0 +1,13 @@
+{
+  "name": "yu-cli",
+  "private": true,
+  "workspaces": [
+    "packages/@yu/*"
+  ],
+  "scripts": {
+    "boot": "node scripts/bootstrap.js"
+  },
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  }
+}

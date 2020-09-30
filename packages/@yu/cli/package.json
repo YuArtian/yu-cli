@@ -1,0 +1,30 @@
+{
+  "name": "@yu/cli",
+  "version": "0.0.0",
+  "bin": {
+    "yu": "bin/yu.js"
+  },
+  "description": "> TODO: description",
+  "keywords": [
+    "@yu/cli"
+  ],
+  "author": "Yu <312364705@qq.com>",
+  "homepage": "https://github.com/YuArtian/yu-cli#readme",
+  "main": "index.js",
+  "publishConfig": {
+    "registry": "https://registry.npm.taobao.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YuArtian/yu-cli.git"
+  },
+  "dependencies": {
+    "commander": "^6.1.0",
+    "fs-extra": "^9.0.1",
+    "minimist": "^1.2.5",
+    "validate-npm-package-name": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=8.9"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "@yu/cli-service",
+  "version": "0.0.0",
+  "main": "lib/Service.js",
+  "bin": {
+    "vue-cli-service": "bin/vue-cli-service.js"
+  },
+  "author": "Yu <312364705@qq.com>",
+  "homepage": "https://github.com/YuArtian/yu-cli#readme",
+  "engines": {
+    "node": ">=8"
+  }
+}
