@@ -29,7 +29,7 @@ const {
   log,
   warn,
   error
-} = require('@vue/cli-shared-utils')
+} = require('@yu/cli-shared-utils')
 
 const { loadOptions } = require('../options')
 const { executeCommand } = require('./executeCommand')
@@ -405,7 +405,7 @@ class PackageManager {
       const realname = stripVersion(packname)
       if (
         isTestOrDebug &&
-        (packname === '@vue/cli-service' || isOfficialPlugin(resolvePluginId(realname)))
+        (packname === '@yu/cli-service' || isOfficialPlugin(resolvePluginId(realname)))
       ) {
         // link packages in current repo for test
         const src = path.resolve(__dirname, `../../../../${realname}`)

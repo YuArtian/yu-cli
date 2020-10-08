@@ -1,5 +1,5 @@
 const program = require('commander')
-const { chalk } = require('@vue/cli-shared-utils')
+const { chalk } = require('@yu/cli-shared-utils')
 
 module.exports = (methodName, log) => {
   program.Command.prototype[methodName] = function (...args) {

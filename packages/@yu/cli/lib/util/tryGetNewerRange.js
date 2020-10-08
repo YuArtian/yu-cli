@@ -1,4 +1,4 @@
-const { semver } = require('@vue/cli-shared-utils')
+const { semver } = require('@yu/cli-shared-utils')
 
 const leadRE = /^(~|\^|>=?)/
 const rangeToVersion = r => r.replace(leadRE, '').replace(/x/g, '0')

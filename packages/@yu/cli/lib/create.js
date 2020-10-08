@@ -2,10 +2,11 @@ const path = require('path')
 const fs = require('fs-extra')
 const inquirer = require('inquirer')
 
-const { clearConsole } = require('./util/clearConsole')
-const { getPromptModules } = require('./util/createTools')
+// const { clearConsole } = require('./util/clearConsole')
+// const { getPromptModules } = require('./util/createTools')
 const { stopSpinner, chalk, error } = require('@yu/cli-shared-utils')
 const validateProjectName = require('validate-npm-package-name')
+const Creator = require('./Creator')
 
 async function create (projectName, options){
   const cwd = options.cwd || process.cwd()
@@ -32,7 +33,7 @@ async function create (projectName, options){
     if (options.force) {
       await fs.remove(targetDir)
     } else {
-      await clearConsole()
+      // await clearConsole()
       if (inCurrent) {
         const { ok } = await inquirer.prompt([
           {
@@ -67,7 +68,8 @@ async function create (projectName, options){
     }
   }
 
-  const creator = new Creator(name, targetDir, getPromptModules())
+  // const creator = new Creator(name, targetDir, getPromptModules())
+  const creator = new Creator(name, targetDir, [])
   await creator.create(options)
 }
 

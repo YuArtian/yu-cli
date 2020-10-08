@@ -1,6 +1,6 @@
 // Infer rootOptions for individual generators being invoked
 // in an existing project.
-const { semver, isPlugin } = require('@vue/cli-shared-utils')
+const { semver, isPlugin } = require('@yu/cli-shared-utils')
 module.exports = function inferRootOptions (pkg) {
   const rootOptions = {}
   const deps = Object.assign({}, pkg.dependencies, pkg.devDependencies)

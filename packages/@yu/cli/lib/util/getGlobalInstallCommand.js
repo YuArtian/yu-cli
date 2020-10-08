@@ -1,4 +1,4 @@
-const { execa, hasYarn, hasPnpm3OrLater } = require('@vue/cli-shared-utils')
+const { execa, hasYarn, hasPnpm3OrLater } = require('@yu/cli-shared-utils')
 
 module.exports = function getGlobalInstallCommand () {
   if (hasYarn()) {

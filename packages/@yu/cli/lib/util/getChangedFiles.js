@@ -1,4 +1,4 @@
-const { execa, hasProjectGit } = require('@vue/cli-shared-utils')
+const { execa, hasProjectGit } = require('@yu/cli-shared-utils')
 
 module.exports = async function getChangedFiles (context) {
   if (!hasProjectGit(context)) return []

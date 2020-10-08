@@ -4,7 +4,7 @@ const {
   request,
 
   hasYarn
-} = require('@vue/cli-shared-utils')
+} = require('@yu/cli-shared-utils')
 const inquirer = require('inquirer')
 const registries = require('./registries')
 const { loadOptions, saveOptions } = require('../options')
