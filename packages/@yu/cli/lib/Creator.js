@@ -1,4 +1,5 @@
 const EventEmitter = require('events')
+const { execa } = require('@yu/cli-shared-utils')
 
 module.exports = class Creator extends EventEmitter {
   constructor(name, context, promptModules){
@@ -9,6 +10,13 @@ module.exports = class Creator extends EventEmitter {
 
     this.presetPrompt = presetPrompt
     console.log('presetPrompt',presetPrompt)
+    this.run = this.run.bind(this)
+  }
+  async create (cliOptions = {}, preset = null) {
+    const { run, name, context, afterInvokeCbs, afterAnyInvokeCbs } = this
+    if (!preset) {
+
+    }
   }
 
   resolveIntroPrompts () {
@@ -35,4 +43,9 @@ module.exports = class Creator extends EventEmitter {
       presetPrompt
     }
   }
+  run (command, args) {
+    if (!args) { [command, ...args] = command.split(/\s+/) }
+    return execa(command, args, { cwd: this.context })
+  }
+
 }
